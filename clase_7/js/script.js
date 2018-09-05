@@ -14,12 +14,12 @@ var ana = {
 function printNameUpper(persona){
     
     // If you put teh same name as te attribute inside brackets you will declar a variable with that name and get the attribute from the object
-    var { name } = persona;
-    console.log(name);
+    var { name, age } = persona;
+    console.log(`Mi nombre es ${name} y tengo ${age} años`);
 }
 
 printNameUpper(carlos);
 printNameUpper(ana);
 
 // You can call a function where an attribute is going to be processed without the object
-printNameUpper( { name: 'Pepito' } );
+printNameUpper( { name: 'Pepito', age: 34} );
