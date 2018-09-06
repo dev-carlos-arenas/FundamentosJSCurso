@@ -1,7 +1,9 @@
+const ADULT_AGE = 18;
+
 var persona = {
     name: 'Carlos',
     lastName: 'Arenas',
-    edad: 2,
+    edad: 32,
     engenieer: true,
     cooker: false,
     singer: false,
@@ -21,12 +23,11 @@ var ana = {
 };
 
 function adult(evaluatePersona){
-    return evaluatePersona.edad > 17;
+    return evaluatePersona.edad >= ADULT_AGE;
 }
 
 function printAdult(person){
-    let mayorEdad = adult(person);
-    if(mayorEdad){
+    if(adult(person)){
         document.write(`<p> ${person.name} es mayor de edad tiene ${person.edad}</p>`);
     }else {
         document.write(`<p>${person.name} no es mayor de edad solo tiene ${person.edad}</p>`);
