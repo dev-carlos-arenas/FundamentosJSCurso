@@ -1,7 +1,7 @@
 var persona = {
     name: 'Carlos',
     lastName: 'Arenas',
-    age: 32,
+    edad: 32,
     engenieer: true,
     cooker: false,
     singer: false,
@@ -33,4 +33,27 @@ function printProfession(person){
 
 }
 
+var carlos = {
+    name: 'Carlos',
+    edad: 19
+};
+
+var ana = {
+    name: 'Ana',
+    edad: 7
+};
+
+
+function printAdult(person){
+    if(person.edad > 17){
+        document.write(`<p> ${person.name} es mayor de edad tiene ${person.edad}</p>`);
+    }else {
+        document.write(`<p>${person.name} no es mayor de edad solo tiene ${person.edad}</p>`);
+    }
+}
+
 printProfession(persona);
+
+printAdult(persona);
+printAdult(carlos);
+printAdult(ana);
