@@ -36,7 +36,7 @@ function printAdult(person){
 }
 
 // Function and if statement in one line
-const permitirAcceso = (nuevaPersona) => !adult(nuevaPersona) ? console.log("Acceso denegado")  ;
+const permitirAcceso = (nuevaPersona) => adult(nuevaPersona) ? console.log("Adelante") : console.log("Acceso denegado") ;
 
 
 printAdult(persona);
