@@ -5,17 +5,25 @@ var persona = {
     peso: 76.2
 };
 
-const AJUSTE_PESO = .2, DIAS_DEL_ANO = 365;
+const AJUSTE_PESO = .2, PESO_DESEADO = persona.peso - 3;
+const comeMucho = () => Math.random() < .3;
+const haceDeporte =() => Math.random() < .4;
 
-var nuevoPeso = random => random <= .25 ? persona.peso += AJUSTE_PESO : random <= .5 ? persona.peso -= AJUSTE_PESO : 0;
+var diasTranscurridos = 1;
 
-console.log(`Al inicio del año ${persona.nombre} pesa ${persona.peso} Kg.`);
+const nuevoPeso = function () {
+    debugger;
+    if(comeMucho()){
+        persona.peso += AJUSTE_PESO;
+    }
+    if(haceDeporte()){
+        persona.peso -= AJUSTE_PESO;
+    }
+    diasTranscurridos++;
+};
 
-
-for(let i = 1; i <= DIAS_DEL_ANO; i++){
-    var random = Math.random();
-    nuevoPeso(random);
+while(persona.peso > PESO_DESEADO){
+    nuevoPeso();
 }
 
-
-console.log(`Al final del año ${persona.nombre} pesa ${persona.peso.toFixed(1)} Kg.`);
+console.log(`Pasaron ${diasTranscurridos} para que ${persona.nombre} baraja 3Kg.`);
