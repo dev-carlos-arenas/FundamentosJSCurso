@@ -1,3 +1,4 @@
+// Objeto que guarda los horoscopos, se imprimen los horoscopos no importando como se escriba May/Min
 const horoscopos = {
     aries: '21 marzo - 19 abril',
     tauro: '20 abril - 20 mayo',
@@ -13,6 +14,7 @@ const horoscopos = {
     piscis: '19 febrero - 20 marzo'
 };
 
+// Evalua el signo y regresa el horóscopo
 const calcularSigno = function(signo){
     switch(signo.toLowerCase()){
         case 'aries':
@@ -21,10 +23,12 @@ const calcularSigno = function(signo){
         case 'tauro':
             console.log(horoscopos.tauro);
             break;
-        case 'geminis', 'géminis':
+        case 'geminis':
+        case 'géminis':
             console.log(horoscopos.geminis);
             break;
         case 'cancer':
+        case 'cáncer':
             console.log(horoscopos.cancer);
             break;
         case 'leo':
@@ -37,6 +41,7 @@ const calcularSigno = function(signo){
             console.log(horoscopos.libra);
             break;
         case 'escorpion':
+        case 'escorpión':
             console.log(horoscopos.escorpion);
             break;
         case 'sagitario':
@@ -57,10 +62,13 @@ const calcularSigno = function(signo){
     }
 };
 
+// Arrow function que sirve para seguir preguntando el signo que quieres ver hasta que se escriba la palabra "salir"
 var preguntarSigno = () => signoZodiacal = prompt('¿Cuál es tu signo? escribe salir para que no vuelva a preguntar.');
 
+// Asigna valor a la variable signoZodiacal para entrar al while
 preguntarSigno();
 
+// Se ejecuta mientras el usuario no escriba la palabra "salir"
 while(signoZodiacal.toLowerCase() !== 'salir'){
     calcularSigno(signoZodiacal);
     preguntarSigno();
