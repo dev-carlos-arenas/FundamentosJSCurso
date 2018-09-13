@@ -8,7 +8,7 @@ const revisaPersonajes = (index) => {
 
         $.get(completeUrl, opts,
             function (data) {
-                resolve(data)
+                resolve(data);
             }
         )
         .fail(() => reject());
