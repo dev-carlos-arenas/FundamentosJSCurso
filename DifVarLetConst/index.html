@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var carlos = {
+            nombre: 'Carlos',
+            apellido: 'Arenas',
+            edad: 32,
+            estadoCivil: 'Soltero'
+        }
+
+        // Este valor no cambia
+        const MAYOR_DE_EDAD = 18;
+
+        function esMayorDeEdad(persona){
+            var mensaje;
+            if(persona.edad >= MAYOR_DE_EDAD){
+                mensaje = 'Es mayor de edad';
+            } else {
+                mensaje = 'Es menor de edad';
+                let mensaje2 = 'Este mensaje no se ve fuera del else';
+            }
+        }
+
+        console.log(mensaje);
+    </script>
+</body>
+</html>
